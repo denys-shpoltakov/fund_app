@@ -198,9 +198,9 @@ button:hover {
     <div class="container">
       <h1>Инвестиционный фонд</h1>
       <nav>
-        <a href="#">Главная</a>
-        <a href="#">Профиль</a>
-        <a href="#">Инвестиции</a>
+        <a href="/fund_app/public/dashboard.php">Профиль</a>
+        <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
+        <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
         <a href="#">Выход</a>
       </nav>
     </div>

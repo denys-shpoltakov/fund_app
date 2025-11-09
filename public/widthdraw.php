@@ -109,7 +109,6 @@ button:hover {
     <div class="container">
       <h1>Инвестиционный фонд</h1>
       <nav>
-        <a href="#">Главная</a>
         <a href="#">Профиль</a>
         <a href="#">Инвестиции</a>
         <a href="#">Выход</a>
