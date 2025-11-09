@@ -84,7 +84,6 @@ input, select {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
-  
 }
 
 button {

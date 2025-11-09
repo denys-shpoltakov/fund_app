@@ -12,64 +12,53 @@ session_start();
     * { box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
       display: flex;
+      background-color: #f5f6fa;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
     .form-container {
-      background: #1a1a1a;
+      background: #f8f9fa;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 30px rgba(255,255,255,0.05);
       width: 370px;
       max-width: 90%;
-      animation: fadeIn 0.4s ease;
     }
-    h2 { text-align: center; margin-bottom: 20px; color: #4fc3f7; }
+    h2 { text-align: center; margin-bottom: 20px; color: #0a3a66; }
     .form-group { margin-bottom: 15px; }
     label { 
       display: block; 
       margin-bottom: 5px; 
-      font-weight: bold; 
-      color: #ccc; 
+      color: #000; 
     }
     input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
       width: 100%;
       padding: 10px;
-      background: #000;
       border: 1px solid #444;
       border-radius: 6px;
-      color: #fff;
     }
-    input::placeholder { color: #888; }
+    input::placeholder { color: #000; }
     button {
       width: 100%;
       padding: 12px;
-      background-color: #fff;
+      background-color: #0a3c68;
       border: none;
       border-radius: 6px;
-      color: #000;
+      color: #fff;
       font-size: 16px;
-      font-weight: bold;
       cursor: pointer;
       transition: background-color 0.2s ease;
     }
-    button:hover { background-color: #ccc; }
+    button:hover { background-color: #0e538c; }
     p {
       text-align: center;
-      color: #888;
+      color: #000;
       font-size: 14px;
       margin-top: 15px;
     }
-    p a { color: #4fc3f7; text-decoration: underline; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    p a { color: #000; text-decoration: underline; }
   </style>
 </head>
 <body>
