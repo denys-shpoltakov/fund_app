@@ -11,37 +11,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TFund | Пополнение депозита</title>
   <style>
-html, body {
-  height: 100%;
+* { box-sizing: border-box; }
+
+body {
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #222;
 }
 
 
-    header {
+  /* ===== Шапка ===== */
+header {
   background-color: #0a3a66;
   color: white;
   padding: 15px 0;
-  }
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
-  header .container 
-  {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1000px;
   margin: auto;
   padding: 0 20px;
-  }
+}
 
-  header nav a {
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+header nav a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
+  transition: 0.2s;
+}
+
+header nav a:hover {
+  text-decoration: underline;
 }
 
 form {
