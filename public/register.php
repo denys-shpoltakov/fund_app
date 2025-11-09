@@ -49,11 +49,6 @@ session_start();
       <p>
         Уже есть аккаунт? — <a href="index.php">Войти</a>
       </p>
-
-      <?php if (isset($_SESSION['message'])): ?>
-        <div class="message"><?= $_SESSION['message'] ?></div>
-        <?php unset($_SESSION['message']); ?>
-      <?php endif; ?>
     </form>
   </div>
 </body>
