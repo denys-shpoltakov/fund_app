@@ -193,15 +193,6 @@ button:hover {
   gap: 20px;
 }
 
-/* ===== Подвал ===== */
-footer {
-  background-color: #0a3a66;
-  color: white;
-  padding: 15px 0;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-}
 
 </style>
 <body>
@@ -263,10 +254,5 @@ footer {
       </table>
     </section>
   </main>
-  <footer>
-    <div class="container">
-      <p>© 2025 Инвестиционный фонд. Все права защищены.</p>
-    </div>
-  </footer>
 </body>
 </html>
