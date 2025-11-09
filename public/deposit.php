@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>TFund | Пополнение депозита</title>
   <style>
 html, body {
   height: 100%;
@@ -17,6 +17,7 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
