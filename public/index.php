@@ -70,15 +70,15 @@ session_start();
 <body>
   <div class="form-container">
     <h2>Вход</h2>
-    <form action="/fund_app/app/login.php" method="post">
+    <form action="/fund_app/app/auth.php" method="post">
       <div class="form-group">
         <label for="email">Почта</label>
-        <input type="email" name="email" id="email" placeholder="Введите свою почту" required>
+        <input type="email" name="email" id="email" placeholder="Введите свою почту">
       </div>
 
       <div class="form-group">
         <label for="password">Пароль</label>
-        <input type="password" name="password" id="password" placeholder="Введите пароль" required>
+        <input type="password" name="password" id="password" placeholder="Введите пароль">
       </div>
 
       <button type="submit">Войти</button>
