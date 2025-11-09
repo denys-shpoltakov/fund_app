@@ -192,17 +192,6 @@ button:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-
-/* ===== Подвал ===== */
-footer {
-  background-color: #0a3a66;
-  color: white;
-  padding: 15px 0;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-}
-
 </style>
 <body>
   <header>
