@@ -73,17 +73,17 @@ session_start();
     <form action="/fund_app/app/auth.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="full_name">ФИО</label>
-        <input type="text" name="full_name" id="full_name" placeholder="Введите своё полное имя" required>
+        <input type="text" name="full_name" id="full_name" placeholder="Введите своё полное имя">
       </div>
 
       <div class="form-group">
         <label for="login">Логин</label>
-        <input type="text" name="login" id="login" placeholder="Введите свой логин" required>
+        <input type="text" name="login" id="login" placeholder="Введите свой логин">
       </div>
 
       <div class="form-group">
         <label for="email">Почта</label>
-        <input type="email" name="email" id="email" placeholder="Введите свою почту" required>
+        <input type="email" name="email" id="email" placeholder="Введите свою почту">
       </div>
 
       <div class="form-group">
@@ -93,12 +93,12 @@ session_start();
 
       <div class="form-group">
         <label for="password">Пароль</label>
-        <input type="password" name="password" id="password" placeholder="Введите пароль" required>
+        <input type="password" name="password" id="password" placeholder="Введите пароль">
       </div>
 
       <div class="form-group">
         <label for="password_confirm">Подтверждение пароля</label>
-        <input type="password" name="password_confirm" id="password_confirm" placeholder="Подтвердите пароль" required>
+        <input type="password" name="password_confirm" id="password_confirm" placeholder="Подтвердите пароль">
       </div>
 
       <button type="submit">Зарегистрироваться</button>
