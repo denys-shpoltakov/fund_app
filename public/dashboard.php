@@ -262,46 +262,7 @@ footer {
         </tr>
       </table>
     </section>
-
-    <!-- Формы -->
-    <section class="grid">
-      <div class="card">
-        <h2>Добавить вклад</h2>
-        <form>
-          <label>Сумма</label>
-          <input type="number" step="0.01" placeholder="Введите сумму">
-
-          <label>Валюта</label>
-          <select>
-            <option>PLN</option>
-            <option>EUR</option>
-            <option>USD</option>
-          </select>
-
-          <button>Добавить вклад</button>
-        </form>
-      </div>
-
-      <div class="card">
-        <h2>Заявка на вывод</h2>
-        <form>
-          <label>Сумма</label>
-          <input type="number" step="0.01" placeholder="Введите сумму">
-
-          <label>Валюта</label>
-          <select>
-            <option>PLN</option>
-            <option>EUR</option>
-            <option>USD</option>
-          </select>
-
-          <button>Создать заявку</button>
-        </form>
-      </div>
-    </section>
-
   </main>
-
   <footer>
     <div class="container">
       <p>© 2025 Инвестиционный фонд. Все права защищены.</p>
