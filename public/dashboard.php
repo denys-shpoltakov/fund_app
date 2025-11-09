@@ -10,7 +10,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Инвестиционный фонд — Личный кабинет</title>
+  <title>TFund | Личный кабинет</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <style>
