@@ -31,7 +31,12 @@ session_start();
     }
     h2 { text-align: center; margin-bottom: 20px; color: #4fc3f7; }
     .form-group { margin-bottom: 15px; }
-    label { display: block; margin-bottom: 5px; font-weight: bold; color: #ccc; }
+    label { 
+      display: block; 
+      margin-bottom: 5px; 
+      font-weight: bold; 
+      color: #ccc; 
+    }
     input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
       width: 100%;
       padding: 10px;
