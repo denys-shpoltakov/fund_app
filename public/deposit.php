@@ -1,9 +1,3 @@
-<?php 
-
-// декларация пополнения
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +20,11 @@
   </header>
       <section class="grid">
       <div class="card">
+        <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> ₽</h3>
         <h2>Добавить вклад</h2>
-        <form>
-          <label>Сумма</label>
-          <input type="number" step="0.01" placeholder="Введите сумму">
-
+      <form action="/fund_app/app/deposit.php" method="post">
+      <label>Сумма:
+    <input type="text" name="amount">
           <label>Валюта</label>
           <select>
             <option>PLN</option>
@@ -38,7 +32,7 @@
             <option>USD</option>
           </select>
 
-          <button>Добавить вклад</button>
+          <button type="submit">Добавить вклад</button>
         </form>
       </div>
 

@@ -77,3 +77,11 @@ p a {
   color: #000; 
   text-decoration: underline; 
 }
+
+.msg {
+    border: 2px solid #FFa908;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
