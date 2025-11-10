@@ -24,24 +24,34 @@
       </nav>
     </div>
   </header>
-      <section class="grid">
-      <div class="card">
-        <h2>Вывод средств</h2>
-        <form>
-          <label>Сумма</label>
-          <input type="number" step="0.01" placeholder="Введите сумму">
+       <section class="grid">
+    <div class="card">
+      <h2>Вывод средств</h2>
 
-          <label>Валюта</label>
-          <select>
-            <option>PLN</option>
-            <option>EUR</option>
-            <option>USD</option>
-          </select>
+      <!-- Форма отправляет данные на withdraw.php -->
+      <form action="../app/widthdraw.php" method="post">
+        <label>Сумма</label>
+        <input type="number" name="amount" step="0.01" placeholder="Введите сумму" required>
 
-          <button>Вывести средства</button>
-        </form>
-      </div>
+        <label>Валюта</label>
+        <select name="currency">
+          <option>PLN</option>
+          <option>EUR</option>
+          <option>USD</option>
+        </select>
 
+        <button type="submit">Вывести средства</button>
+      </form>
 
+      <!-- Сообщение из сессии -->
+      <?php
+        session_start();
+        if (!empty($_SESSION['message'])) {
+            echo '<p>' . htmlspecialchars($_SESSION['message']) . '</p>';
+            unset($_SESSION['message']);
+        }
+      ?>
+    </div>
+  </section>
 </body>
 </html>

@@ -1,10 +1,11 @@
-<?php 
+<?php
+session_start();
 
-// личный кабинет пользователя
-
+if (!isset($_SESSION['user'])) {
+    header('Location: ../public/index.php');
+    exit();
+}
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -23,7 +24,7 @@
         <a href="/fund_app/public/dashboard.php">Профиль</a>
         <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
         <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
-        <a href="#">Выход</a>
+        <a href="/fund_app/app/logout.php">Выход</a>
       </nav>
     </div>
   </header>
@@ -32,14 +33,14 @@
 
     <!-- Профиль пользователя -->
     <section class="profile-card">
-      <img src="" alt="Аватар пользователя" class="avatar">
+       <img src="/fund_app/<?= $_SESSION['user']['avatar'] ?>" alt="Аватар пользователя" class="avatar">
       <div class="profile-info">
-        <h2>Иван Петров</h2>
-        <p class="email">ivan.petrov@example.com</p>
+        <h2><?= $_SESSION['user']['full_name'] ?></h2>
+        <p class="email"><?= $_SESSION['user']['email'] ?></p>
         <div class="balance">
           <div>
             <span class="label">Общий баланс:</span>
-            <span class="value">12 700 PLN</span>
+            <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> ₽</h3>
           </div>
           <div>
             <span class="label">Доходность:</span>

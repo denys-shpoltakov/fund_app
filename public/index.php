@@ -1,7 +1,11 @@
-<?php 
+<?php
 session_start();
-?>
 
+if (isset($_SESSION['user'])) {
+    header('Location: ../public/dashboard.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,7 +17,7 @@ session_start();
 <body>
   <div class="form-container">
     <h2>Вход</h2>
-    <form action="/fund_app/app/auth.php" method="post">
+    <form action="/fund_app/app/signin.php" method="post">
       <div class="form-group">
         <label for="email">Почта</label>
         <input type="email" name="email" id="email" placeholder="Введите свою почту">
@@ -30,10 +34,12 @@ session_start();
         Нет аккаунта? — <a href="register.php">Зарегистрироваться</a>
       </p>
 
-      <?php if (isset($_SESSION['message'])): ?>
-        <div class="message"><?= $_SESSION['message'] ?></div>
-        <?php unset($_SESSION['message']); ?>
-      <?php endif; ?>
+        <?php  
+      if (isset($_SESSION['message'])) {
+        echo '      <p class="msg"> ' . $_SESSION['message'] . ' </p>';
+      }
+      unset($_SESSION['message']);
+        ?>
     </form>
   </div>
 </body>
