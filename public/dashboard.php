@@ -1,108 +1,19 @@
-<?php 
+<?php
+session_start();
 
-// личный кабинет пользователя
-
+if (!isset($_SESSION['user'])) {
+    header('Location: ../public/index.php');
+    exit();
+}
 ?>
-
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>TFund | Личный кабинет</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/fund_app/public/css/dashboard.css">
 </head>
 <style>
-    /* ===== Базовые стили ===== */
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f5f6fa;
-  color: #222;
-}
-
-/* ===== Шапка ===== */
-header {
-  background-color: #0a3a66;
-  color: white;
-  padding: 15px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
-
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Контейнер ===== */
-.container {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-/* ===== Карточки ===== */
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-h2 {
-  color: #0a3a66;
-  margin-top: 0;
-}
-
-/* ===== Профиль ===== */
-.profile-card {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 20px;
-  object-fit: cover;
-  border: 3px solid #0a3a66;
-}
-
-.profile-info h2 {
-  margin: 0;
-  font-size: 22px;
-}
 
 .profile-info .email {
   color: #555;
@@ -265,20 +176,26 @@ input:checked + .slider:before {
 
     <!-- Профиль пользователя -->
     <section class="profile-card">
-      <img src="" alt="Аватар пользователя" class="avatar">
+       <img src="/fund_app/<?= $_SESSION['user']['avatar'] ?>" alt="Аватар пользователя" class="avatar">
       <div class="profile-info">
-        <h2>Иван Петров</h2>
-        <p class="email">ivan.petrov@example.com</p>
+        <h2><?= $_SESSION['user']['full_name'] ?></h2>
+        <p class="email"><?= $_SESSION['user']['email'] ?></p>
         <div class="balance">
           <div>
             <span class="label">Общий баланс:</span>
-            <span class="value">12 700 PLN</span>
+            <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> PLN</h3>
           </div>
           <div>
             <span class="label">Доходность:</span>
             <span class="value positive">+6.2%</span>
           </div>
         </div>
+                <?php
+        if (!empty($_SESSION['message'])) {
+            echo '<p>' . htmlspecialchars($_SESSION['message']) . '</p>';
+            unset($_SESSION['message']);
+        }
+        ?>
       </div>
     </section>
 
