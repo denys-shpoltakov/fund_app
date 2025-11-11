@@ -76,7 +76,7 @@ input:checked + .slider:before {
         <a href="/fund_app/public/dashboard.php">Профиль</a>
         <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
         <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
-        <a href="#">Выход</a>
+        <a href="/fund_app/app/logout.php">Выход</a>
         <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
