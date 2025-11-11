@@ -40,13 +40,19 @@ if (!isset($_SESSION['user'])) {
         <div class="balance">
           <div>
             <span class="label">Общий баланс:</span>
-            <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> ₽</h3>
+            <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> PLN</h3>
           </div>
           <div>
             <span class="label">Доходность:</span>
             <span class="value positive">+6.2%</span>
           </div>
         </div>
+                <?php
+        if (!empty($_SESSION['message'])) {
+            echo '<p>' . htmlspecialchars($_SESSION['message']) . '</p>';
+            unset($_SESSION['message']);
+        }
+        ?>
       </div>
     </section>
 
