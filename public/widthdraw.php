@@ -100,7 +100,92 @@ button {
 button:hover {
   background-color: #0e538c;
 }
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0a3c68;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+}
 
+button:hover {
+  background-color: #0e538c;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #000000ff; 
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+/* текст внутри формы */
+a {
+  color: #0077ff;
+  transition: color 0.3s;
+}
+
+body.dark a {
+  color: #66aaff;
+}
+label {
+  color: #0b2447;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+body.dark label {
+  color: #cfcfcf; 
+}
+body.dark a form {
+  color: #cfcfcf;
+}
 
   </style>
 </head>
@@ -114,6 +199,10 @@ button:hover {
         <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
         <a href="#">Выход</a>
       </nav>
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+        </label>
     </div>
   </header>
       <section class="grid">
@@ -133,7 +222,24 @@ button:hover {
           <button>Вывести средства</button>
         </form>
       </div>
+      <script>
+const toggle = document.getElementById('theme-toggle');
 
+// При загрузке страницы проверяем сохранённую тему
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  toggle.checked = true;
+}
 
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    document.body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.body.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }
+});
+</script>
 </body>
 </html>

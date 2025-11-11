@@ -192,6 +192,57 @@ button:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #000000ff; 
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
 </style>
 <body>
   <header>
@@ -202,6 +253,10 @@ button:hover {
         <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
         <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
         <a href="#">Выход</a>
+        <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+        </label>
       </nav>
     </div>
   </header>
@@ -252,6 +307,25 @@ button:hover {
       </table>
     </section>
   </main>
+        <script>
+const toggle = document.getElementById('theme-toggle');
+
+// При загрузке страницы проверяем сохранённую тему
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  toggle.checked = true;
+}
+
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    document.body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.body.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }
+});
+</script>
 </body>
 </html>
 
