@@ -15,6 +15,145 @@ if (!isset($_SESSION['user'])) {
 </head>
 <style>
 
+.profile-info .email {
+  color: #555;
+  margin: 4px 0 12px;
+}
+
+.balance {
+  display: flex;
+  gap: 30px;
+}
+
+.balance .label {
+  color: #777;
+  font-size: 14px;
+}
+
+.balance .value {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.balance .positive {
+  color: green;
+}
+
+/* ===== Таблицы ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background: #f0f2f8;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.change-up {
+  color: green;
+  font-weight: bold;
+}
+
+.change-down {
+  color: red;
+  font-weight: bold;
+}
+
+/* ===== Формы ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  background-color: #0a3a66;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #094066;
+}
+
+/* ===== Сетка для форм ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #000000ff; 
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
 </style>
 <body>
   <header>
@@ -24,7 +163,11 @@ if (!isset($_SESSION['user'])) {
         <a href="/fund_app/public/dashboard.php">Профиль</a>
         <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
         <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
-        <a href="/fund_app/app/logout.php">Выход</a>
+        <a href="#">Выход</a>
+        <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+        </label>
       </nav>
     </div>
   </header>
@@ -81,6 +224,25 @@ if (!isset($_SESSION['user'])) {
       </table>
     </section>
   </main>
+        <script>
+const toggle = document.getElementById('theme-toggle');
+
+// При загрузке страницы проверяем сохранённую тему
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  toggle.checked = true;
+}
+
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    document.body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.body.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }
+});
+</script>
 </body>
 </html>
 
