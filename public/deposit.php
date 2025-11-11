@@ -20,7 +20,6 @@
   </header>
       <section class="grid">
       <div class="card">
-        <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> ₽</h3>
         <h2>Добавить вклад</h2>
       <form action="/fund_app/app/deposit.php" method="post">
       <label>Сумма:
