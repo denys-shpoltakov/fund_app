@@ -12,97 +12,10 @@ if (!isset($_SESSION['user'])) {
   <meta charset="utf-8">
   <title>TFund | Личный кабинет</title>
   <link rel="stylesheet" href="/fund_app/public/css/dashboard.css">
+  <script src="/fund_app/public/js/script.js"></script>
 </head>
+  <!-- Стили черной темы -->
 <style>
-
-.profile-info .email {
-  color: #555;
-  margin: 4px 0 12px;
-}
-
-.balance {
-  display: flex;
-  gap: 30px;
-}
-
-.balance .label {
-  color: #777;
-  font-size: 14px;
-}
-
-.balance .value {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.balance .positive {
-  color: green;
-}
-
-/* ===== Таблицы ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th {
-  background: #f0f2f8;
-  text-align: left;
-  padding: 10px;
-  border-bottom: 2px solid #ddd;
-}
-
-td {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.change-up {
-  color: green;
-  font-weight: bold;
-}
-
-.change-down {
-  color: red;
-  font-weight: bold;
-}
-
-/* ===== Формы ===== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-}
-
-button {
-  background-color: #0a3a66;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
-}
-
-button:hover {
-  background-color: #094066;
-}
-
-/* ===== Сетка для форм ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
 body.dark {
   background-color: #121212;
   color: #ffffff;
@@ -224,25 +137,6 @@ input:checked + .slider:before {
       </table>
     </section>
   </main>
-        <script>
-const toggle = document.getElementById('theme-toggle');
-
-// При загрузке страницы проверяем сохранённую тему
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
-  toggle.checked = true;
-}
-
-toggle.addEventListener('change', () => {
-  if (toggle.checked) {
-    document.body.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.body.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  }
-});
-</script>
 </body>
 </html>
 

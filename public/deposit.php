@@ -4,98 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/fund_app/public/css/transactions.css">
+  <script src="/fund_app/public/js/script.js"></script>
   <title>TFund | Пополнение депозита</title>
+  <!-- Стили черной темы -->
   <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f5f6fa;
-  color: #222;
-}
-
-
-  /* ===== Шапка ===== */
-header {
-  background-color: #0a3a66;
-  color: white;
-  padding: 15px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
-
-header nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-form {
-  background-color: #f8f9fa; 
-  padding: 20px;
-  border-radius: 10px; 
-  max-width: 500px;
-  margin: 40px auto; 
-
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #0a3c68; 
-}
-
-label {
-  font-weight: bold;
-  margin-top: 10px;
-  display: block;
-}
-
-input, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0a3c68;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-}
-
-button:hover {
-  background-color: #0e538c;
-}
-
 body.dark {
   background-color: #121212;
   color: #ffffff;
@@ -202,24 +114,5 @@ body.dark a form {
           <button type="submit">Добавить вклад</button>
         </form>
       </div>
-      <script>
-const toggle = document.getElementById('theme-toggle');
-
-// При загрузке страницы проверяем сохранённую тему
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
-  toggle.checked = true;
-}
-
-toggle.addEventListener('change', () => {
-  if (toggle.checked) {
-    document.body.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.body.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  }
-});
-</script>
 </body>
 </html>
