@@ -103,7 +103,7 @@ body.dark a form {
         <h2>Добавить вклад</h2>
       <form action="/fund_app/app/deposit.php" method="post">
       <label>Сумма:
-    <input type="text" name="amount">
+    <input type="text" name="amount" placeholder="Введите сумму">
           <label>Валюта</label>
           <select>
             <option>PLN</option>
