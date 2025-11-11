@@ -13,6 +13,9 @@ if (isset($_SESSION['user'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/fund_app/public/css/auth.css">
   <title>TFund — Вход</title>
+  <style>
+    
+  </style>
 </head>
 <body>
   <div class="form-container">

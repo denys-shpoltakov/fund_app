@@ -89,7 +89,7 @@ a {
 }
 
 body.dark a {
-  color: #66aaff;
+  color: #fff;
 }
 label {
   color: #0b2447;
