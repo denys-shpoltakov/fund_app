@@ -131,9 +131,9 @@ body.dark a form {
       <section class="grid">
       <div class="card">
         <h2>Вывод средств</h2>
-        <form>
+        <form action="../app/widthdraw.php" method="post">
           <label>Сумма</label>
-          <input type="number" step="0.01" placeholder="Введите сумму">
+          <input type="number" name="amount" step="0.01" placeholder="Введите сумму">
 
           <label>Валюта</label>
           <select>
@@ -142,7 +142,7 @@ body.dark a form {
             <option>USD</option>
           </select>
 
-          <button>Вывести средства</button>
+          <button type="submit">Вывести средства</button>
         </form>
       </div>
 </body>
