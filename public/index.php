@@ -48,7 +48,7 @@ body.dark h2 {
 }
 
 body.dark h2 {
-  color: #fff;
+  color: #121212;
 }
 
 .switch {
