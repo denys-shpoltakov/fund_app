@@ -15,7 +15,8 @@
             "id" => $user['id'],
             "full_name" => $user['full_name'],
             "avatar" => $user['avatar'],
-            "email" => $user['email']
+            "email" => $user['email'],
+            "balance" => $user['balance']
         ];
 
         header('Location: ../public/dashboard.php');
