@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/fund_app/public/css/transactions.css">
-  <script src="/fund_app/public/js/script.js"></script>
+  <script src="/fund_app/public/js/script.js" defer></script>
   <title>TFund | Пополнение депозита</title>
   <!-- Стили черной темы -->
   <style>

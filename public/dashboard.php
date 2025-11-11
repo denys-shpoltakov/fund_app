@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
   <meta charset="utf-8">
   <title>TFund | Личный кабинет</title>
   <link rel="stylesheet" href="/fund_app/public/css/dashboard.css">
-  <script src="/fund_app/public/js/script.js"></script>
+  <script src="/fund_app/public/js/script.js" defer></script>
 </head>
   <!-- Стили черной темы -->
 <style>
