@@ -13,6 +13,29 @@ body.dark {
   color: #ffffff;
 }
 
+body.dark form {
+  background: #3f3f3fff;
+
+}
+
+body.dark input {
+  background: #7a7a7aff;
+  color: #fff;
+}
+
+body.dark input::placeholder {
+  color: #fff;
+}
+
+body.dark select {
+  background: #7a7a7aff;
+  color: #fff;
+}
+
+body.dark h2 {
+  color: #fff;
+}
+
 .switch {
   position: fixed;
   top: 15px;

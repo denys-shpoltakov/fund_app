@@ -18,7 +18,31 @@ if (!isset($_SESSION['user'])) {
 <style>
 body.dark {
   background-color: #121212;
-  color: #ffffff;
+  color: #fff;
+}
+
+body.dark .card {
+  background: #3f3f3fff;
+}
+
+body.dark tr th {
+  background: #3f3f3fff;
+}
+
+body.dark .profile-card {
+  background: #3f3f3fff;
+}
+
+body.dark .profile-card .label {
+  color: #fff;
+}
+
+body.dark .profile-card .email {
+  color: #fff;
+}
+
+body.dark h2 {
+  color: #fff;
 }
 
 .switch {
