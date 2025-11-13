@@ -97,10 +97,10 @@ input:checked + .slider:before {
     <div class="container">
       <h1>Инвестиционный фонд</h1>
       <nav>
-        <a href="/fund_app/public/dashboard.php">Профиль</a>
-        <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
-        <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
-        <a href="/fund_app/app/logout.php">Выход</a>
+        <a href="/fund_app/public/dashboard.php">Profil</a>
+        <a href="/fund_app/public/deposit.php">Zasilić depozyt</a>
+        <a href="/fund_app/public/widthdraw.php">Wypłata środków</a>
+        <a href="/fund_app/app/logout.php">Wyjście</a>
         <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
@@ -113,17 +113,17 @@ input:checked + .slider:before {
 
     <!-- Профиль пользователя -->
     <section class="profile-card">
-       <img src="/fund_app/<?= $_SESSION['user']['avatar'] ?>" alt="Аватар пользователя" class="avatar">
+       <img src="/fund_app/<?= $_SESSION['user']['avatar'] ?>" alt="Awatar użytkownika" class="avatar">
       <div class="profile-info">
         <h2><?= $_SESSION['user']['full_name'] ?></h2>
         <p class="email"><?= $_SESSION['user']['email'] ?></p>
         <div class="balance">
           <div>
-            <span class="label">Общий баланс:</span>
+            <span class="label">bilans ogólny:</span>
             <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> PLN</h3>
           </div>
           <div>
-            <span class="label">Доходность:</span>
+            <span class="label">Rentowność:</span>
             <span class="value positive">+6.2%</span>
           </div>
         </div>

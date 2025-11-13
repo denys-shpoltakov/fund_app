@@ -117,32 +117,32 @@ body.dark a form {
     <div class="container">
       <h1>Инвестиционный фонд</h1>
       <nav>
-        <a href="/fund_app/public/dashboard.php">Профиль</a>
-        <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
-        <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
-        <a href="/fund_app/app/logout.php">Выход</a>
-      </nav>
-      <label class="switch">
+        <a href="/fund_app/public/dashboard.php">Profil</a>
+        <a href="/fund_app/public/deposit.php">Zasilić depozyt</a>
+        <a href="/fund_app/public/widthdraw.php">Wypłata środków</a>
+        <a href="/fund_app/app/logout.php">Wyjście</a>
+        <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
         </label>
+      </nav>
     </div>
   </header>
       <section class="grid">
       <div class="card">
-        <h2>Вывод средств</h2>
+        <h2>Wypłata środków</h2>
         <form action="../app/widthdraw.php" method="post">
-          <label>Сумма</label>
-          <input type="number" name="amount" step="0.01" placeholder="Введите сумму">
+          <label>Kwota</label>
+          <input type="number" name="amount" step="0.01" placeholder="Wprowadź kwotę">
 
-          <label>Валюта</label>
+          <label>Waluta</label>
           <select>
             <option>PLN</option>
             <option>EUR</option>
             <option>USD</option>
           </select>
 
-          <button type="submit">Вывести средства</button>
+          <button type="submit">Wypłacić środki</button>
         </form>
       </div>
 </body>

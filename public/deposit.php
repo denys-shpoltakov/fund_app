@@ -110,10 +110,10 @@ body.dark a form {
     <div class="container">
       <h1>Инвестиционный фонд</h1>
       <nav>
-        <a href="/fund_app/public/dashboard.php">Профиль</a>
-        <a href="/fund_app/public/deposit.php">Пополнить депозит</a>
-        <a href="/fund_app/public/widthdraw.php">Вывод средств</a>
-        <a href="/fund_app/app/logout.php">Выход</a>
+        <a href="/fund_app/public/dashboard.php">Profil</a>
+        <a href="/fund_app/public/deposit.php">Zasilić depozyt</a>
+        <a href="/fund_app/public/widthdraw.php">Wypłata środków</a>
+        <a href="/fund_app/app/logout.php">Wyjście</a>
         <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
@@ -123,18 +123,18 @@ body.dark a form {
   </header>
       <section class="grid">
       <div class="card">
-        <h2>Добавить вклад</h2>
+        <h2>Dodać wkład</h2>
       <form action="/fund_app/app/deposit.php" method="post">
-      <label>Сумма:
-    <input type="text" name="amount" placeholder="Введите сумму">
-          <label>Валюта</label>
+      <label>Kwota:
+    <input type="text" name="amount" placeholder="Wprowadź kwotę">
+          <label>Waluta</label>
           <select>
             <option>PLN</option>
             <option>EUR</option>
             <option>USD</option>
           </select>
 
-          <button type="submit">Добавить вклад</button>
+          <button type="submit">Dodać wkład</button>
         </form>
       </div>
 </body>
