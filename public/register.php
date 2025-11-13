@@ -13,7 +13,7 @@ if (isset($_SESSION['user'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/fund_app/public/css/auth.css">
    <script src="/fund_app/public/js/script.js" defer></script>
-  <title>TFund — Регистрация</title>
+  <title>TFund — Rejestracja</title>
   <style>
         body.dark {
   background-color: #121212;
@@ -103,34 +103,34 @@ input:checked + .slider:before {
 </head>
 <body>
   <div class="form-container">
-    <h2>Регистрация</h2>
+    <h2>Rejestracja</h2>
     <form action="/fund_app/app/signup.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="full_name">ФИО</label>
-        <input type="text" name="full_name" id="full_name" placeholder="Введите своё полное имя">
+        <label for="full_name">Imię i nazwisko</label>
+        <input type="text" name="full_name" id="full_name" placeholder="Wprowadź swoje pełne imię i nazwisko">
       </div>
 
       <div class="form-group">
-        <label for="email">Почта</label>
-        <input type="email" name="email" id="email" placeholder="Введите свою почту">
+        <label for="email">E-mai</label>
+        <input type="email" name="email" id="email" placeholder="Wprowadź swój adres e-mail">
       </div>
 
       <div class="form-group">
-        <label for="avatar">Изображение профиля (опционально)</label>
-        <input type="file" name="avatar" id="avatar">
+        <label for="avatar">Zdjęcie profilowe(opcjonalnie)</label>
+        <input type="file" name="avatar" id="avatar" >
       </div>
 
       <div class="form-group">
-        <label for="password">Пароль</label>
-        <input type="password" name="password" id="password" placeholder="Введите пароль">
+        <label for="password">Hasło</label>
+        <input type="password" name="password" id="password" placeholder="Wprowadź hasło">
       </div>
 
       <div class="form-group">
-        <label for="password_confirm">Подтверждение пароля</label>
-        <input type="password" name="password_confirm" id="password_confirm" placeholder="Подтвердите пароль">
+        <label for="password_confirm">Potwierdzenie hasła</label>
+        <input type="password" name="password_confirm" id="password_confirm" placeholder="Potwierdź hasło">
       </div>
 
-      <button type="submit">Зарегистрироваться</button>
+      <button type="submit">Zarejestrować się</button>
 
         <label class="switch">
         <input type="checkbox" id="theme-toggle">
@@ -139,7 +139,7 @@ input:checked + .slider:before {
 
 
       <p>
-        Уже есть аккаунт? — <a href="index.php">Войти</a>
+       Masz już konto — <a href="index.php">Zalogować się</a>
       </p>
         <?php  
       if (isset($_SESSION['message'])) {

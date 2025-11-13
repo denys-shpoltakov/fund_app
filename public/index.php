@@ -13,7 +13,7 @@ if (isset($_SESSION['user'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/fund_app/public/css/auth.css">
   <script src="/fund_app/public/js/script.js" defer></script>
-  <title>TFund — Вход</title>
+  <title>TFund — Logowanie</title>
   <style>
     body.dark {
   background-color: #121212;
@@ -101,19 +101,19 @@ input:checked + .slider:before {
 </head>
 <body>
   <div class="form-container">
-    <h2>Вход</h2>
+    <h2>Logowanie</h2>
     <form action="/fund_app/app/signin.php" method="post">
       <div class="form-group">
-        <label for="email">Почта</label>
-        <input type="email" name="email" id="email" placeholder="Введите свою почту">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Wprowadź swój adres e-mail">
       </div>
 
       <div class="form-group">
-        <label for="password">Пароль</label>
-        <input type="password" name="password" id="password" placeholder="Введите пароль">
+        <label for="password">Hasło</label>
+        <input type="password" name="password" id="password" placeholder="Wprowadź hasło">
       </div>
 
-      <button type="submit">Войти</button>
+      <button type="submit">Zaloguj się</button>
 
       
             <label class="switch">
@@ -122,7 +122,7 @@ input:checked + .slider:before {
         </label>
 
       <p>
-        Нет аккаунта? — <a href="register.php">Зарегистрироваться</a>
+        Nie masz konta? — <a href="register.php">Zarejestrować się</a>
       </p>
 
         <?php  
