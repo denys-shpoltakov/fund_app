@@ -1,8 +1,12 @@
+Использовался curl для проведения теста на brute-force
+
 $ for i in {1..15}; do
   echo "Attempt $i"
   curl -i -c cookies.txt -b cookies.txt -X POST http://localhost/fund_app/app/signin.php \
     -d "email=bad@example.com" -d "password=wrong"
 done
+
+
 Attempt 1
 HTTP/1.1 302 Found
 Date: Thu, 13 Nov 2025 09:13:07 GMT
@@ -188,3 +192,16 @@ Content-Type: text/html; charset=UTF-8
 
 Был сделан тест, где была проба зайти в аккаунт с неверными данными и посмотреть на реакцию сервера, 
 сервер ответил 302, он просто делает redirect на страницу авторизации и не блокирует - защита отсутствует
+
+После установки защиты - теперь срабатывает код 200
+
+Attempt 1
+HTTP/1.1 200 OK
+Date: Thu, 13 Nov 2025 10:17:00 GMT
+Server: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30
+X-Powered-By: PHP/8.0.30
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 35
+Content-Type: text/html; charset=UTF-8
