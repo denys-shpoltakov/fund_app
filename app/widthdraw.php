@@ -1,4 +1,7 @@
 <?php
+
+// декларация вывода
+
 session_start();
 require_once 'db.php';
 
