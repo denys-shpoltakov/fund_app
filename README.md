@@ -48,7 +48,7 @@ cd fund_app
 
 ### Profil użytkownika / User profile
 
-![Profil użytkownika](url)
+![Profil użytkownika](https://github.com/denys-shpoltakov/fund_app/blob/0e46f611170dd83768baef4cfdb7e639e7ae8692/screenshots/dashboard.png)
 
 Na profilu użytkownika można obejrzeć:
 
