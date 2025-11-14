@@ -24,7 +24,6 @@ cd fund_app
 
 4. Настроить базу данных
 
-```markdown
 - Перейти на страницу http://localhost/phpmyadmin
 - Создать базу данных с названием schema
 - Сделать импорт базы данных из папки sql файл schema.sql
