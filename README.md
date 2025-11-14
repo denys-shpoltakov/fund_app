@@ -1,12 +1,12 @@
 # fund_app
 Aplikacja do zarządzania finansami
 
-## Описание
+## Opis
 
 Projekt ma na celu zarządzanie finansami użytkowników.
 Obsługuje rejestrację, autoryzację, przeglądanie salda i ochronę.
 
-## Установка
+## Instalacja
 
 1. Sklonuj repozytorium:
 
@@ -121,7 +121,7 @@ W signin.php używa takiej konstrukcji:
 
 Prepared statements, całkowicie blokują SQL wstrzykiwania
  
-## technology stack
+## Technology stack
 
 Języki programowania:
 Podstawowa logika:
