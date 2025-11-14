@@ -67,7 +67,7 @@ cd fund_app
 
 ### Zasilić depozyt / Deposit top-up
 
-![Страница пополнения баланса](https://github.com/denys-shpoltakov/fund_app/blob/0683ce20a8836458531a92709a85e540aed5741f/screenshots/login.png)
+![Страница пополнения баланса](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/deposit.png)
 
 На этой странице можно сделать симуляцию пополнения баланса
 
@@ -79,7 +79,7 @@ cd fund_app
 
 ### Wypłata środków / Withdrawal page
 
-![Страница вывода средств](https://github.com/denys-shpoltakov/fund_app/blob/0683ce20a8836458531a92709a85e540aed5741f/screenshots/login.png)
+![Страница вывода средств](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/widthdraw.png)
 
 На этой странице можно сделать вывод средств
 
@@ -103,7 +103,7 @@ cd fund_app
 
 На этом веб-сайте имеется brute-force защита. Если начать пытаться подобрать пароль, то после 5 неверных попыток вы получите блокировку IP на 15 минут.
 
-![brute-force photo](https://github.com/denys-shpoltakov/fund_app/blob/0683ce20a8836458531a92709a85e540aed5741f/screenshots/login.png)
+![brute-force photo](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/brute-force.png)
 
 ### Обход регистрации/авторизации через URL
 
