@@ -16,7 +16,7 @@ https://github.com/denys-shpoltakov/fund_app.git
 
 2. Перейти в папку проекта
 
-```
+```bash
 cd fund_app
 ```
 
@@ -25,17 +25,14 @@ cd fund_app
 4. Настроить базу данных
 
 ```markdown
-
 - Перейти на страницу http://localhost/phpmyadmin
 - Создать базу данных с названием schema
 - Сделать импорт базы данных из папки sql файл schema.sql
 
 
-### Использование / Ysage
-```markdown
-## Использование
+### Использование / Usage
 
-![Главная страница](screenshots/login.png)
+![Главная страница](/fund_app/screenshots/login.png)
 
 - Открыть в браузере `http://localhost/fund_app/public/index.php`
 - Ввести email и пароль
