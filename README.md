@@ -33,7 +33,7 @@ cd fund_app
 
 ### Rejestracja / register
 
-![Strona rejestracji](url)
+![Strona rejestracji](https://github.com/denys-shpoltakov/fund_app/blob/2e5505fe64609bcd11592919c1240d34495cf272/screenshots/register.png)
 
 - Otwórz w przeglądarce `http://localhost/fund_app/public/register.php`
 - Wprowadź Imię, Nazwisko, E-mail, awatar (Opcjonalnie) i hasło
