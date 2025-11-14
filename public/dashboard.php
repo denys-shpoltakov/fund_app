@@ -120,7 +120,7 @@ input:checked + .slider:before {
         <div class="balance">
           <div>
             <span class="label">bilans ogólny:</span>
-            <h3>Баланс: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> PLN</h3>
+            <h3>Bilans: <?= htmlspecialchars($_SESSION['user']['balance'] ?? '0.00') ?> PLN</h3>
           </div>
           <div>
             <span class="label">Rentowność:</span>
