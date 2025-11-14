@@ -13,3 +13,12 @@
 ```
 https://github.com/denys-shpoltakov/fund_app.git
 ```
+2. Перейти в папку проекта
+
+```
+cd fund_app
+```
+
+3. Настроить базу данных
+
+```markdown
