@@ -2,16 +2,13 @@
 session_start();
 require_once 'db.php';
 
-// Настройки защиты
 define('MAX_ATTEMPTS', 5);
-define('WINDOW_MINUTES', 15); // окно в минутах
+define('WINDOW_MINUTES', 15);
 
 $window = WINDOW_MINUTES;
 
-// Получаем IP
 $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 
-// Получаем данные из POST
 $email = trim($_POST['email'] ?? '');
 $password_raw = $_POST['password'] ?? '';
 
@@ -21,9 +18,9 @@ if ($email === '' || $password_raw === '') {
     exit();
 }
 
-// -------------------------
+
 // 1) Проверяем число попыток
-// -------------------------
+
 $sql_count = "SELECT COUNT(*) AS cnt 
               FROM login_attempts 
               WHERE ip = ? AND attempt_time > (NOW() - INTERVAL $window MINUTE)";
@@ -59,9 +56,9 @@ if ($attempts >= MAX_ATTEMPTS) {
     exit();
 }
 
-// -------------------------
+
 // 2) Проверяем пользователя
-// -------------------------
+
 $password_md5 = md5($password_raw); // пока оставляем md5
 
 $sql_user = "SELECT id, full_name, email, avatar, balance 
