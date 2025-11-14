@@ -1,4 +1,4 @@
-# fund_app
+## fund_app
 Приложение для управления финансами
 
 ## Описание
@@ -13,3 +13,19 @@
 ```
 https://github.com/denys-shpoltakov/fund_app.git
 ```
+
+2. Перейти в папку проекта
+
+```
+cd fund_app
+```
+
+3. Открыть XAMPP и включите MYSQL & Apache
+
+4. Настроить базу данных
+
+```markdown
+
+- Перейти на страницу http://localhost/phpmyadmin
+- Создать базу данных с названием schema
+- Сделать импорт базы данных из папки sql файл schema.sql
