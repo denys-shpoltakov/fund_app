@@ -1,6 +1,6 @@
 Использовался curl для проведения теста на brute-force
 
-$ for i in {1..15}; do
+for i in {1..15}; do
   echo "Attempt $i"
   curl -i -c cookies.txt -b cookies.txt -X POST http://localhost/fund_app/app/signin.php \
     -d "email=bad@example.com" -d "password=wrong"
