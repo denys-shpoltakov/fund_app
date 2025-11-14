@@ -1,151 +1,151 @@
 # fund_app
-Приложение для управления финансами
+Aplikacja do zarządzania finansami
 
 ## Описание
 
-Проект предназначен для управления пользовательскими финансами.
-Поддерживает регистрацию, авторизацию, просмотр баланс и защиту.
+Projekt ma na celu zarządzanie finansami użytkowników.
+Obsługuje rejestrację, autoryzację, przeglądanie salda i ochronę.
 
 ## Установка
 
-1. Склонировать репозиторий:
+1. Sklonuj repozytorium:
 
 ```bash
 https://github.com/denys-shpoltakov/fund_app.git
 ```
 
-2. Перейти в папку проекта
+2. Przejdź do folderu projektu
 
 ```bash
 cd fund_app
 ```
 
-3. Открыть XAMPP и включите MYSQL & Apache
+3. Otwórz XAMPP i włącz MYSQL & Apache
 <br>
-4. Настроить базу данных
+4. Skonfiguruj bazę danych
 
-- Перейти на страницу http://localhost/phpmyadmin
-- Создать базу данных с названием schema
-- Сделать импорт базы данных из папки sql файл schema.sql
+- Przejdź do strony http://localhost/phpmyadmin
+- Utwórz bazę danych o nazwie schema
+- Zrobić import bazy danych z folderu sql Plik schema.sql
 
 
-## Использование / Usage
+## Korzystanie / Usage
 
-### Регистрация / register
+### Rejestracja / register
 
-![Страница регистрации](url)
+![Strona rejestracji](url)
 
-- Открыть в браузере `http://localhost/fund_app/public/register.php`
-- Ввести имя,фамилию, email, аватар(необязательно) и пароль
-- После успешной регистрации откроется страница с авторизацией, где нужно будет ввести email и пароль
+- Otwórz w przeglądarce `http://localhost/fund_app/public/register.php`
+- Wprowadź Imię, Nazwisko, E-mail, awatar (Opcjonalnie) i hasło
+- Po pomyślnej rejestracji otworzy się strona z autoryzacją, na której musisz wprowadzić adres e-mail i hasło
 
-### Авторизация / auth
-![Страница авторизации](https://github.com/denys-shpoltakov/fund_app/blob/0683ce20a8836458531a92709a85e540aed5741f/screenshots/login.png)
+### autoryzacja / auth
+![Strona autoryzacji](https://github.com/denys-shpoltakov/fund_app/blob/0683ce20a8836458531a92709a85e540aed5741f/screenshots/login.png)
 
-- Открыть в браузере `http://localhost/fund_app/public/index.php`
-- Ввести email и пароль
-- После успешной авторизации откроется панель пользователя (Dashboard)
+- Otwórz w przeglądarce `http://localhost/fund_app/public/index.php`
+- Wprowadź e-mail i hasło
+- Po udanej autoryzacji otworzy się panel użytkownika (Dashboard)
 
-### Профиль пользователя / User profile
+### Profil użytkownika / User profile
 
-![Профиль пользователя](url)
+![Profil użytkownika](url)
 
-На профиле пользователя можно посмотреть:
+Na profilu użytkownika można obejrzeć:
 
-- Имя
-- Фамилию
+- Imię
+- Nazwisko
 - Email
-- Фото пользователя
-- Баланс
+- Zdjęcia użytkownika
+- Bilans
 
-Так же есть навигационное меню которое содержит:
+Istnieje również menu nawigacyjne, które zawiera:
 
 - Profil (Home)
-- Zasilić depozyt - страница пополнения баланса
-- Wypłata środków - страница вывода средств
-- Wyjście - Выход с аккаунта
+- Zasilić depozyt - strona doładowania
+- Wypłata środków - strona wypłaty
+- Wyjście-wylogowanie z konta
 
 ### Zasilić depozyt / Deposit top-up
 
-![Страница пополнения баланса](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/deposit.png)
+![Zasilić depozyt](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/deposit.png)
 
-На этой странице можно сделать симуляцию пополнения баланса
+Na tej stronie możesz wykonać symulację doładowania
 
-Чтобы это сделать необходимо:
+Aby to zrobić, musisz:
 
-- Указать сумму пополнения и нажать на кнопку dodać wkład
+- Podać kwotę doładowania i nacisnąć przycisk Dodaj wkład
 
-После откроется страница профиля, и если всё было пополнено без ошибок, то в информации пользователя будет написано, что баланс был успешно пополнен.
+Następnie otworzy się strona profilu, a jeśli wszystko zostało uzupełnione bez błędów, informacje o użytkowniku będą napisane, że saldo zostało pomyślnie uzupełnione.
 
 ### Wypłata środków / Withdrawal page
 
-![Страница вывода средств](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/widthdraw.png)
+![Wypłata środków](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/widthdraw.png)
 
-На этой странице можно сделать вывод средств
+Na tej stronie można dokonać wypłaty
 
-Чтобы это сделать необходимо:
+Aby to zrobić, musisz:
 
-- Указать сумму для вывода и нажать на кнопку dodać wkład
+- Określić kwotę do wypłaty i nacisnąć przycisk Dodaj wkład
 
-Если указать сумму 0 или ниже 0, то будет ошибка, баланс не будет снижен. Если всё хорошо, то средства будут списаны.
+Jeśli podasz kwotę 0 lub niższą niż 0, wystąpi błąd, saldo nie zostanie obniżone. Jeśli wszystko jest w porządku, środki zostaną odpisane.
 
-### Выход
+### Wyjście
 
-Если нажать на навигационном меню кнопку Wyjście, перебросит на страницу index.php (login) и нужно будет сделать повторный вход.
+Jeśli klikniesz w menu nawigacyjnym przycisk Wyjdź, przeniesie Cię na stronę index.php (login) i trzeba będzie dokonać ponownego logowania.
 
-### Смена темы на темную
+### Zmiana motywu na ciemny
 
-На сайте есть кнопка в навигационном меню, которая позволяет сменить тему. Браузер запоминает выбор пользователя при помощи localStorage. При обновлении страницы выбор будет запоминаться.
+Witryna ma przycisk w menu nawigacyjnym, który pozwala zmienić motyw. Przeglądarka zapamiętuje wybór użytkownika za pomocą localStorage. Po odświeżeniu strony wybór zostanie zapamiętany.
 
-## Защита
+## Ochrona
 
 ### Brute-force
 
-На этом веб-сайте имеется brute-force защита. Если начать пытаться подобрать пароль, то после 5 неверных попыток вы получите блокировку IP на 15 минут.
+Na tej stronie znajduje się brute-force Ochrona. Jeśli zaczniesz próbować znaleźć hasło, po 5 nieprawidłowych próbach otrzymasz blokadę IP na 15 minut.
 
 ![brute-force photo](https://github.com/denys-shpoltakov/fund_app/blob/2fa53d3b56aaf448a2d6f77d39ed3400b4b24df9/screenshots/brute-force.png)
 
-### Обход регистрации/авторизации через URL
+### Obejście rejestracji / autoryzacji za pomocą adresu URL
 
-Нельзя перейти на страницу профиля (dashboard.php) если пользователь не авторизован или не зарегестрирован.
+Nie można przejść do strony profilu (dashboard.php) jeśli użytkownik nie jest zalogowany lub zarejestrowany.
 
-Нельзя перейти на страницу регистрации/авторизации если пользователь авторизован.
+Nie można przejść do strony rejestracji/autoryzacji, jeśli użytkownik jest zalogowany.
 
-## SQL-injection (SQL-инъекция)
+## SQL-injection (wstrzykiwania)
 
-Проект не уязвим к SQL-инъекциям.
+Projekt nie jest podatny na iniekcje SQL.
 
-В signin.php используется такая конструкция:
+W signin.php używa takiej konstrukcji:
 
 ```$stmt = $connect->prepare("SELECT ... WHERE email = ? AND password = ?");```
 
-Prepared statements, они полностью блокируют SQL-инъекции.
+Prepared statements, całkowicie blokują SQL wstrzykiwania
+ 
+## technology stack
 
-## Стек технологий
-
-Языки программирования:
-Основная логика:
+Języki programowania:
+Podstawowa logika:
 - PHP 8
 
-Смена темы:
+Zmiana tematu:
 - JavaScript
 
-База данных:
+Baza Dannych:
 - MySQL
 
-Для работы с сервером:
+Do pracy z serwerem:
 - XAMPP
 
-Разметка и стили:
+Znaczniki i style:
 - HTML & CSS
 
-## Вклад / Сontribution
+## Wkład / Сontribution
 
-Если хотите помочь с проектом:
-- Создайте свою ветку: ```bash git checkout -b feature-branch```
-- Сделайте изменения и commit: ```bash git commit -m "Добавил новую фичу"```
-- Отправьте Pull Request
+Jeśli chcesz pomóc w projekcie:
+- Stwórz swój oddział: ```bash git checkout -b feature-branch```
+- Dokonaj zmian i commit: ```bash git commit -m "Add new feature"```
+- Wyślij Pull Request
 
-## Лицензия
+## Licencja
 
-Этот проект лицензирован под MIT License.
+Ten projekt jest licencjonowany na licencji MIT.
