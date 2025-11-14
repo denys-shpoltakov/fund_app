@@ -13,7 +13,7 @@ $email = trim($_POST['email'] ?? '');
 $password_raw = $_POST['password'] ?? '';
 
 if ($email === '' || $password_raw === '') {
-    $_SESSION['message'] = 'Введите email и пароль';
+    $_SESSION['message'] = 'Wprowadź email i hasło';
     header('Location: ../public/index.php');
     exit();
 }
@@ -51,7 +51,7 @@ if ($attempts >= MAX_ATTEMPTS) {
         $minutes_left = $window;
     }
 
-    $_SESSION['message'] = "Слишком много попыток входа. Попробуйте снова через {$minutes_left} минут.";
+    $_SESSION['message'] = "Zbyt wiele prób logowania. Spróbuj ponownie po {$minutes_left} minutach";
     header('Location: ../public/index.php');
     exit();
 }
@@ -96,7 +96,7 @@ if ($user = $result->fetch_assoc()) {
     $ins->execute();
     $ins->close();
 
-    $_SESSION['message'] = 'Неверная почта или пароль';
+    $_SESSION['message'] = 'Nieprawidłowy email lub hasło';
     header('Location: ../public/index.php');
     exit();
 }

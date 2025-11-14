@@ -15,7 +15,7 @@ $amount_raw = $_POST['amount'] ?? '';
 $amount = str_replace(',', '.', trim($amount_raw));
 
 if (!is_numeric($amount) || (float)$amount <= 0) {
-    $_SESSION['message'] = 'Некорректная сумма';
+    $_SESSION['message'] = 'Nieprawidłowa kwota';
     header('Location: ../public/dashboard.php');
     exit();
 }
@@ -24,7 +24,7 @@ $amount = number_format((float)$amount, 2, '.', '');
 
 $stmt = $connect->prepare("UPDATE `users` SET `balance` = `balance` - ? WHERE `id` = ? AND `balance` >= ?");
 if (!$stmt) {
-    $_SESSION['message'] = 'Ошибка БД: ' . $connect->error;
+    $_SESSION['message'] = 'Błąd BD ' . $connect->error;
     header('Location: ../public/dashboard.php');
     exit();
 }
@@ -32,7 +32,7 @@ $stmt->bind_param('did', $amount, $user_id, $amount);
 $stmt->execute();
 
 if ($stmt->affected_rows === 0) {
-    $_SESSION['message'] = 'Недостаточно средств или пользователь не найден';
+    $_SESSION['message'] = 'Niewystarczające środki lub nie znaleziono użytkownika';
     $stmt->close();
     header('Location: ../public/dashboard.php');
     exit();
@@ -46,9 +46,9 @@ $stmt2->execute();
 $res = $stmt2->get_result();
 if ($row = $res->fetch_assoc()) {
     $_SESSION['user']['balance'] = $row['balance'];
-    $_SESSION['message'] = 'Вывод средств успешен';
+    $_SESSION['message'] = 'Wypłata środków jest udana';
 } else {
-    $_SESSION['message'] = 'Пользователь не найден';
+    $_SESSION['message'] = 'Nie znaleziono użytkownika';
 }
 $stmt2->close();
 
