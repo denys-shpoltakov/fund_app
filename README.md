@@ -29,3 +29,14 @@ cd fund_app
 - Перейти на страницу http://localhost/phpmyadmin
 - Создать базу данных с названием schema
 - Сделать импорт базы данных из папки sql файл schema.sql
+
+
+### Использование / Ysage
+```markdown
+## Использование
+
+![Главная страница](screenshots/login.png)
+
+- Открыть в браузере `http://localhost/fund_app/public/index.php`
+- Ввести email и пароль
+- После успешной авторизации откроется панель пользователя (Dashboard)
