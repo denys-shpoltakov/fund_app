@@ -108,7 +108,7 @@ body.dark a form {
 <body>
   <header>
     <div class="container">
-      <h1>Инвестиционный фонд</h1>
+      <h1>Fundusz inwestycyjny</h1>
       <nav>
         <a href="/fund_app/public/dashboard.php">Profil</a>
         <a href="/fund_app/public/deposit.php">Zasilić depozyt</a>

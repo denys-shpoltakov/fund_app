@@ -95,7 +95,7 @@ input:checked + .slider:before {
 <body>
   <header>
     <div class="container">
-      <h1>Инвестиционный фонд</h1>
+      <h1>Fundusz inwestycyjny</h1>
       <nav>
         <a href="/fund_app/public/dashboard.php">Profil</a>
         <a href="/fund_app/public/deposit.php">Zasilić depozyt</a>
@@ -138,13 +138,13 @@ input:checked + .slider:before {
 
     <!-- Статистика -->
     <section class="card">
-      <h2>Состояние счёта</h2>
+      <h2>Stan rachunku</h2>
       <table>
         <tr>
-          <th>Валюта</th>
-          <th>Внесено</th>
-          <th>Текущая стоимость</th>
-          <th>Изменение</th>
+          <th>Dewiza</th>
+          <th>Wniesiono</th>
+          <th>Wartość bieżąca</th>
+          <th>Zmiana</th>
         </tr>
         <tr>
           <td>PLN</td>
